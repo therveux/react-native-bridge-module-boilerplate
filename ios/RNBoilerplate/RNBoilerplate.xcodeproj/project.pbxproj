@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56A6908022806262005340BF /* RNBoilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6907F22806262005340BF /* RNBoilerplate.swift */; };
+		56A69088228062CF005340BF /* RNBoilerplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A69087228062CF005340BF /* RNBoilerplate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		56A6907C22806262005340BF /* libRNBoilerplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBoilerplate.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A6907F22806262005340BF /* RNBoilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNBoilerplate.swift; sourceTree = "<group>"; };
+		56A69086228062CE005340BF /* RNBoilerplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBoilerplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		56A69087228062CF005340BF /* RNBoilerplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBoilerplate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				56A6907F22806262005340BF /* RNBoilerplate.swift */,
+				56A69087228062CF005340BF /* RNBoilerplate.m */,
+				56A69086228062CE005340BF /* RNBoilerplate-Bridging-Header.h */,
 			);
 			path = RNBoilerplate;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				TargetAttributes = {
 					56A6907B22806262005340BF = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -120,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56A6908022806262005340BF /* RNBoilerplate.swift in Sources */,
+				56A69088228062CF005340BF /* RNBoilerplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,11 +252,19 @@
 		56A6908422806262005340BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BDU49BK9D;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBoilerplate/RNBoilerplate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -258,11 +273,18 @@
 		56A6908522806262005340BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BDU49BK9D;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBoilerplate/RNBoilerplate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

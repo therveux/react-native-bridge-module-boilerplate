@@ -6,6 +6,12 @@
 //  Copyright © 2019 Theo Herveux. All rights reserved.
 //
 
-class RNBoilerplate {
+import Foundation
 
+@objc(RNBoilerplate)
+class RNBoilerplate: NSObject {
+    @objc
+    func test(_ resolve: (RCTPromiseResolveBlock), rejecter reject: (RCTPromiseRejectBlock)) {
+        resolve("#### Resolve done")
+    }
 }
