@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
   "author": "Theo Herveux",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-plugin-react": "7.13.0",
     "react": "16.8.3",
     "react-native": "0.59.5"
   }
