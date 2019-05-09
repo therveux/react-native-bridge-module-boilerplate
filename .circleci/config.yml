@@ -1,29 +1,21 @@
 version: 2.1
-jobs:
-  install:
-    working_directory: ~/react-native-boilerplate
+
+executors:
+  node-executor:
     docker:
       - image: circleci/node
+    working_directory: /react-native-boilerplate
+
+jobs:
+  install:
+    executor: node-executor
     steps:
       - checkout
 
-      - restore_cache:
-          key: yarn-packages-v1-{{ checksum "yarn.lock" }}-{{ arch }}
-      - run:
-          name: Install Yarn Dependencies
-          command: yarn --frozen-lockfile
-      - save_cache:
-          key: yarn-packages-v1-{{ checksum "yarn.lock" }}-{{ arch }}
-          paths:
-            - ~/.cache/yarn
-
   lint:
-    working_directory: ~/react-native-boilerplate
-    docker:
-      - image: circleci/node
-
+    executor: node-executor
     steps:
-      - run: yarn lint
+      - run: yarn install --frozen-lockfile
 
 workflows:
   "Hello World":
