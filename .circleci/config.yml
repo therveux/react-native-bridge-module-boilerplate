@@ -1,16 +1,38 @@
 version: 2
-jobs: 
+jobs:
+  install:
+    docker: circleci/node
+    steps:
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1-{{ .Bracnh }}-
+            - yarn-packages-v1-
+      - run:
+          name: Install Yarn Dependencies
+          command: yarn --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
   lint:
-      machine: true
+      docker: circleci/node
+
       steps:
           - run:
-              name: Launch Test for begin
+              name: 
               command: yarn lint
 
 workflows:
   version: 2
   lint:
       jobs:
-          - lint
+          - install
+          - lint:
+              requires:
+                - install
 
 
