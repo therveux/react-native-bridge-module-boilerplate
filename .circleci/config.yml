@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   install:
     working_directory: ~/react-native-boilerplate
@@ -7,38 +7,11 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Bracnh }}-
-            - yarn-packages-v1-
-
       - run:
           name: Install Yarn Dependencies
           command: yarn --frozen-lockfile
 
-      - save_cache:
-          name: Save Yarn Package Cache
-          paths:
-            - ~/.cache/yarn
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-
-  lint:
-      docker: circleci/node
-
-      steps:
-          - run:
-              name: 
-              command: yarn lint
-
 workflows:
-  version: 2
-  node:
+  "Hello World":
     jobs:
       - install
-      - lint:
-          requires:
-            - install
-
-
