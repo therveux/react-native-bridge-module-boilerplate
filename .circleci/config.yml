@@ -11,10 +11,18 @@ jobs:
     executor: node-executor
     steps:
       - checkout
+      - run: |
+          ls -a
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
 
   lint:
     executor: node-executor
     steps:
+      - run: |
+          ls -a
       - run: yarn install --frozen-lockfile
 
 workflows:
