@@ -7,17 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-        "type": "git",
-        "url": "https://github.com/Hurobaki/react-native-bridge-module-boilerplate.git"
+    "type": "git",
+    "url": "https://github.com/Hurobaki/react-native-bridge-module-boilerplate.git"
   },
   "peerDependencies": {
-        "react": "*",
-        "react-native": "*"
+    "react-native": "*"
   },
   "bugs": {
     "url": "https://github.com/Hurobaki/react-native-bridge-module-boilerplate/issues",
     "email": "hurobaki@gmail.com"
   },
   "author": "Theo Herveux",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.5"
+  }
 }
