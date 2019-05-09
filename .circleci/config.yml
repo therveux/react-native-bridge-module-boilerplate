@@ -1,7 +1,8 @@
 version: 2
 jobs:
   install:
-    docker: circleci/node
+    docker:
+      - image: circleci/node
     steps:
       - restore_cache:
           name: Restore Yarn Package Cache
