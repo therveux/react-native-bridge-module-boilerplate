@@ -1,0 +1,15 @@
+version: 2
+jobs: 
+  test:
+      steps:
+          - run:
+              name: Launch Test for begin
+              command: ls
+
+workflows:
+  version: 2
+  test:
+      jobs:
+          - test
+
+
