@@ -17,7 +17,18 @@ jobs:
           paths:
             - ~/.cache/yarn
 
+  lint:
+    working_directory: ~/react-native-boilerplate
+    docker:
+      - image: circleci/node
+
+    steps:
+      - run: yarn lint
+
 workflows:
   "Hello World":
     jobs:
       - install
+      - lint:
+          requires:
+            - install
