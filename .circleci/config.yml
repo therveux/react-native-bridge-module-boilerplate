@@ -23,10 +23,10 @@ jobs:
   lint:
     executor: node-executor
     steps:
-      - run:
-          name: Check Scripts
-          command: |
-            ls -a .
+      - attach_workspace:
+          at: ~/react-native-boilerplate
+      - run: |
+          ls -a
       - run: yarn install --frozen-lockfile
 
 workflows:
