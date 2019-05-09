@@ -4,7 +4,7 @@ executors:
   node-executor:
     docker:
       - image: circleci/node
-    working_directory: /react-native-boilerplate
+    working_directory: ~/react-native-boilerplate
 
 jobs:
   install:
