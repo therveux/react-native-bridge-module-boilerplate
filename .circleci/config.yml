@@ -1,16 +1,16 @@
 version: 2
 jobs: 
-  test:
+  lint:
       machine: true
       steps:
           - run:
               name: Launch Test for begin
-              command: ls
+              command: yarn lint
 
 workflows:
   version: 2
-  test:
+  lint:
       jobs:
-          - test
+          - lint
 
 
