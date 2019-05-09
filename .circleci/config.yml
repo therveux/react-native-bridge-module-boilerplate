@@ -11,8 +11,10 @@ jobs:
     executor: node-executor
     steps:
       - checkout
-      - run: |
-          ls -a
+      - run:
+          name: Check Scripts
+          command: |
+            ls -a .
       - persist_to_workspace:
           root: .
           paths:
@@ -21,8 +23,10 @@ jobs:
   lint:
     executor: node-executor
     steps:
-      - run: |
-          ls -a
+      - run:
+          name: Check Scripts
+          command: |
+            ls -a .
       - run: yarn install --frozen-lockfile
 
 workflows:
