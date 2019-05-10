@@ -21,6 +21,7 @@
   "author": "Theo Herveux",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "7.4.4",
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.2.0",
