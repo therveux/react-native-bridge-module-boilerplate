@@ -1,5 +1,6 @@
 # React Native Bridge Module Boilerplate
 
+
 <p align="center">
   <a href="https://github.com/Hurobaki/react-native-bridge-module-boilerplate/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg"/>
@@ -21,6 +22,7 @@
   </a>
 </p>
 
+
 Boilerplate to show how to create a native bridge module for React-Native applications using Swift and Kotlin languages but also how to share this module on [NPM](https://www.npmjs.com/).
 This repository details the steps to create the native bridge module but also allows you to use it to better understand it.
 
@@ -38,11 +40,11 @@ So I decided to create a tutorial to explain how to create your own features by 
 
 ```bash
 # Installation
-yarn add react-native-boilerplate
+yarn add react-native-bridge-module-boilerplate
 ```
 
 ```jsx
-import RNBoilerplate from 'react-native-boilerplate
+import RNBoilerplate from 'react-native-boilerplate'
 ```
 
 ## Linking method
@@ -54,3 +56,4 @@ Following official React-Native documentation, [manually link]() the dependency.
 Open your Xcode project and locate **Libraries** directory, right click on it and select **Add files to "yourprojectname"**
 
 Find **react-native-boilerplate** directory inside your **node_modules**
+
