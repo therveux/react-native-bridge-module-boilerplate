@@ -14,8 +14,8 @@
   <a href="https://david-dm.org/Hurobaki/react-native-bridge-module-boilerplate?type=dev">
       <img src="https://david-dm.org/Hurobaki/react-native-bridge-module-boilerplate/dev-status.svg" />
   </a>
-  <a href="https://www.npmjs.org/package/react-native-boilerplate">
-    <img src="https://badge.fury.io/js/react-native-boilerplate.svg" alt="Current npm package version." />
+  <a href="https://www.npmjs.org/package/react-native-bridge-module-boilerplate">
+    <img src="https://badge.fury.io/js/react-native-bridge-module-boilerplate.svg" alt="Current npm package version." />
   </a>
   <a href="https://github.com/Hurobaki/react-native-bridge-module-boilerplate/pulls">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
@@ -36,11 +36,24 @@ Sometimes you want a feature that already exists but does not fully meet your ne
 It may be relevant to contribute to the improvement of this feature and sometimes not...
 So I decided to create a tutorial to explain how to create your own features by gathering all the knowledge I could find here.
 
+## TODO List
+
+- [ ] Provide Android Kotlin example
+- [ ] Write documentation from scratch bridge module
+- [ ] Export NativeModules Javascript
+- [ ] Babelify source code
+
+
 ## Usage
 
 ```bash
 # Installation
+
+# Using Yarn
 yarn add react-native-bridge-module-boilerplate
+
+#Using Npm
+npm install react-native-bridge-module-boilerplate --save
 ```
 
 ```jsx
@@ -49,11 +62,15 @@ import RNBoilerplate from 'react-native-boilerplate'
 
 ## Linking method
 
-Following official React-Native documentation, [manually link]() the dependency.
+Following official React-Native documentation, [manually link](https://facebook.github.io/react-native/docs/linking-libraries-ios) the dependency.
 
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2000px-Apple_logo_black.svg.png" width=30/> iOS
 
 Open your Xcode project and locate **Libraries** directory, right click on it and select **Add files to "yourprojectname"**
 
 Find **react-native-boilerplate** directory inside your **node_modules**
+
+## Do it by your own
+
+
 
