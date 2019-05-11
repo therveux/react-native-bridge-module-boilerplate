@@ -1,6 +1,8 @@
 # React Native Bridge Module Boilerplate
 
 [![CircleCI](https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate.svg?style=svg)](https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate)
+[![HitCount](http://hits.dwyl.com/Hurobaki/react-native-bridge-module-boilerplate.svg)](http://hits.dwyl.com/Hurobaki/react-native-bridge-module-boilerplate)
+[![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
 
 Boilerplate to show how to create a native bridge module for React-Native applications using Swift and Kotlin languages but also how to share this module on [NPM](https://www.npmjs.com/).
 This repository details the steps to create the native bridge module but also allows you to use it to better understand it.
