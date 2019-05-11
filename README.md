@@ -7,6 +7,12 @@
   <a href="https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate">
     <img src="https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate.svg?style=shield" alt="Current CircleCI build status." />
   </a>
+  <a href="https://david-dm.org/Hurobaki/react-native-bridge-module-boilerplate">
+    <img src="https://david-dm.org/Hurobaki/react-native-bridge-module-boilerplate/status.svg" />
+  </a>
+  <a href="https://david-dm.org/Hurobaki/react-native-bridge-module-boilerplate?type=dev">
+      <img src="https://david-dm.org/Hurobaki/react-native-bridge-module-boilerplate/dev-status.svg" />
+  </a>
   <a href="https://www.npmjs.org/package/react-native-boilerplate">
     <img src="https://badge.fury.io/js/react-native-boilerplate.svg" alt="Current npm package version." />
   </a>
