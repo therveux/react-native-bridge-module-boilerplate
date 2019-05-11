@@ -8,10 +8,20 @@
 
 import Foundation
 
-@objc(RNBoilerplate)
-class RNBoilerplate: NSObject {
+@objc(RNBridgeModule)
+class RNBridgeModule: NSObject {
     @objc
-    func promiseRN(_ resolve: (RCTPromiseResolveBlock), rejecter reject: (RCTPromiseRejectBlock)) {
+    func promiseRN(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
         resolve("#### Resolve done")
     }
+    
+    @objc
+    func callbackRN(_ callback: RCTResponseSenderBlock) {
+        let resultDict: NSDictionary = [
+            "result": "callback called"
+        ]
+        callback([NSNull(), resultDict])
+    }
+    
+  
 }
