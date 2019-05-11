@@ -1,8 +1,19 @@
 # React Native Bridge Module Boilerplate
 
-[![CircleCI](https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate.svg?style=svg)](https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate)
-[![HitCount](http://hits.dwyl.com/Hurobaki/react-native-bridge-module-boilerplate.svg)](http://hits.dwyl.com/Hurobaki/react-native-bridge-module-boilerplate)
-[![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
+<p align="center">
+  <a href="https://github.com/Hurobaki/react-native-bridge-module-boilerplate/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg"/>
+  </a>
+  <a href="https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate">
+    <img src="https://circleci.com/gh/Hurobaki/react-native-bridge-module-boilerplate.svg?style=shield" alt="Current CircleCI build status." />
+  </a>
+  <a href="https://www.npmjs.org/package/react-native-boilerplate">
+    <img src="https://badge.fury.io/js/react-native-boilerplate.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://github.com/Hurobaki/react-native-bridge-module-boilerplate/pulls">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+  </a>
+</p>
 
 Boilerplate to show how to create a native bridge module for React-Native applications using Swift and Kotlin languages but also how to share this module on [NPM](https://www.npmjs.com/).
 This repository details the steps to create the native bridge module but also allows you to use it to better understand it.
