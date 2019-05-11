@@ -11,7 +11,7 @@ import Foundation
 @objc(RNBoilerplate)
 class RNBoilerplate: NSObject {
     @objc
-    func test(_ resolve: (RCTPromiseResolveBlock), rejecter reject: (RCTPromiseRejectBlock)) {
+    func promiseRN(_ resolve: (RCTPromiseResolveBlock), rejecter reject: (RCTPromiseRejectBlock)) {
         resolve("#### Resolve done")
     }
 }

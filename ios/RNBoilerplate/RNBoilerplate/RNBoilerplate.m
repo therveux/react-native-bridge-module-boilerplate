@@ -11,7 +11,7 @@
 
 @interface RCT_EXTERN_MODULE(RNBoilerplate, NSObject)
 
-RCT_EXTERN_METHOD(test: (RCTPromiseResolveBlock)resolve
+RCT_EXTERN_METHOD(promiseRN: (RCTPromiseResolveBlock)resolve
                   rejecter: (RCTPromiseRejectBlock)reject)
 
 @end
