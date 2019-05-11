@@ -1,11 +1,16 @@
 {
-  "name": "react-native-boilerplate",
+  "name": "react-native-bridge-module-boilerplate",
   "version": "0.1.0",
-  "description": "",
+  "description": "Boilerplate to show how to create a native bridge module for React-Native applications using Swift and Kotlin languages.",
   "main": "src/index.js",
+  "files": [
+    "ios/",
+    "src/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint **/*.js"
+    "lint": "npx eslint src/**/*.js",
+    "npm:test": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,11 @@
   },
   "author": "Theo Herveux",
   "license": "MIT",
+  "keywords": [
+    "react-native",
+    "swift",
+    "kotlin"
+  ],
   "devDependencies": {
     "@babel/core": "7.4.4",
     "babel-eslint": "10.0.1",
