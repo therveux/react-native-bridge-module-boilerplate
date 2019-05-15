@@ -15,6 +15,6 @@ class RNBridgeModule(context: ReactApplicationContext): ReactContextBaseJavaModu
 
     @ReactMethod
     fun testKotlinAndroid(promise: Promise) {
-        promise.resolve('KOTLIN POWA')
+        promise.resolve("KOTLIN POWA")
     }
 }

@@ -22,8 +22,8 @@ public class RNLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  fun testMethodAndroid(promise: Promise) {
-    promise.resolve('resolve')
+  public void testMethodAndroid(Promise promise) {
+    promise.resolve("resolve");
   }
 
 }
