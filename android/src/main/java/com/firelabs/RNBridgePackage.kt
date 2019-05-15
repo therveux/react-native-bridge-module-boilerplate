@@ -10,16 +10,16 @@ import java.util.Arrays
 
 class RNBridgePackage : ReactPackage {
 
-    override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
+
+    override fun createNativeModules(reactContext: ReactApplicationContext) = reactContext?.let {
         // Register your native module
         // https://facebook.github.io/react-native/docs/native-modules-android.html#register-the-module
-        return Arrays.asList<NativeModule>(
+        mutableListOf(
                 RNBridgeModule(reactContext)
         )
     }
 
-    override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-        return emptyList()
-    }
+    override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<View, ReactShadowNode<*>>> = mutableListOf()
+
 
 }
