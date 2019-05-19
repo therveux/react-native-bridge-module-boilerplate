@@ -4,3 +4,5 @@ node_modules/
 
 android/local.properties
 android/android.iml
+android/.gradle/
+android/build/
