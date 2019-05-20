@@ -3,7 +3,9 @@
 node_modules/
 lib/
 
+
 android/local.properties
 android/android.iml
 android/.gradle/
 android/build/
+android/.gradle/
