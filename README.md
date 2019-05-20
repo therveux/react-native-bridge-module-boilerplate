@@ -57,7 +57,7 @@ npm install react-native-bridge-module-boilerplate --save
 ```
 
 ```jsx
-import RNBoilerplate from 'react-native-bridge-module-boilerplate'
+import { BridgeModule } from 'react-native-bridge-module-boilerplate'
 ```
 
 ## Linking methods
@@ -99,7 +99,7 @@ dependencies {
 }
 ```
 
-* and finally in your `android/app/src/main/java/com/<project>/MainApplication.java`
+* And finally in your `android/app/src/main/java/com/<project>/MainApplication.java`
 
 ```gradle
 import com.firelabs.RNBridgePackage;
@@ -115,6 +115,9 @@ import com.firelabs.RNBridgePackage;
     }
 ```
 
+## Methods
+
+### usePromise()
 
 ## Do it by your own
 
