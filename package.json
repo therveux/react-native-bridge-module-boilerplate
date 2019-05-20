@@ -2,15 +2,20 @@
   "name": "react-native-bridge-module-boilerplate",
   "version": "0.1.0",
   "description": "Boilerplate to show how to create a native bridge module for React-Native applications using Swift and Kotlin languages.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "files": [
-    "ios/",
-    "src/"
+    "ios",
+    "src",
+    "android",
+    "lib"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint src/**/*.js",
-    "npm:test": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
+    "npm:test": "yarn pack && tar -xvzf *.tgz && rm -rf package *.tgz",
+    "build": "yarn clean && npx babel src --out-dir lib",
+    "clean": "rm -rf lib/",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -31,11 +36,14 @@
     "kotlin"
   ],
   "devDependencies": {
+    "@babel/cli": "7.4.4",
     "@babel/core": "7.4.4",
     "babel-eslint": "10.0.1",
+    "babel-preset-react-native": "4.0.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.2.0",
     "eslint-plugin-react": "7.13.0",
+    "metro-react-native-babel-preset": "0.54.1",
     "react": "16.8.3",
     "react-native": "0.59.5"
   }
