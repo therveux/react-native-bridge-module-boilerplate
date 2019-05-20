@@ -38,10 +38,10 @@ So I decided to create a tutorial to explain how to create your own features by 
 
 ## TODO List
 
-- [ ] Provide Android Kotlin example
+- [x] Provide Android Kotlin example
 - [ ] Write documentation from scratch bridge module
 - [ ] Export NativeModules Javascript
-- [ ] Babelify source code
+- [x] Babelify source code
 
 
 ## Usage
@@ -57,10 +57,18 @@ npm install react-native-bridge-module-boilerplate --save
 ```
 
 ```jsx
-import RNBoilerplate from 'react-native-boilerplate'
+import RNBoilerplate from 'react-native-bridge-module-boilerplate'
 ```
 
-## Linking method
+## Linking methods
+
+### Automatic link
+
+```bash
+react-native link react-native-bridge-module-boilerplate
+```
+
+### Manual link
 
 Following official React-Native documentation, [manually link](https://facebook.github.io/react-native/docs/linking-libraries-ios) the dependency.
 
@@ -70,7 +78,49 @@ Open your Xcode project and locate **Libraries** directory, right click on it an
 
 Find **react-native-boilerplate** directory inside your **node_modules**
 
+## <img src="http://pngimg.com/uploads/android_logo/android_logo_PNG12.png" width=30 /> Android
+
+* Add following lines in `android/settings.gradle`
+
+```gradle
+...
+include ':react-native-bridge-module-boilerplate'
+project(':react-native-bridge-module-boilerplate').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-bridge-module-boilerplate/android')
+...
+include ':app'
+```
+
+* In your `android/app/build.gradle`
+
+```gradle
+dependencies {
+    ...
+    implementation project(':react-native-bridge-module-boilerplate')
+}
+```
+
+* and finally in your `android/app/src/main/java/com/<project>/MainApplication.java`
+
+```gradle
+import com.firelabs.RNBridgePackage;
+
+...
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new RNBridgePackage()
+      );
+    }
+```
+
+
 ## Do it by your own
+
+## Troubleshooting
+
+[ ] Kotlin problems
 
 
 
